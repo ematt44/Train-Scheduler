@@ -19,7 +19,7 @@ firebase.initializeApp(config);
 
 
 // Sound for "All Aboard" 
-var audio = new Audio('all-ab-cut.mp3');
+var audio = new Audio('assets/images/all-ab-cut.mp3');
 audio.play();
 
 // Variables for database and current time
@@ -60,33 +60,34 @@ $("#addTrainBtn").on("click", function() {
     var trainFrequency = $("#frequency-input").val().trim();
 
  // Play train horn sound when user clicks submit  
+ // Variable for hit by train
     
-    var audio = new Audio('train-horn.mp3');
+    var audio = new Audio('assets/images/train-horn.mp3');
     audio.play();
-    var hitByTrain = new Audio('hit-by-train.mp3');
+    var hitByTrain = new Audio('assets/images/hit-by-train.mp3');
     
     
     // If user does not enter input in one of the fields play sound for getting hit by train
 
     if (trainName == "") {
-        var hitByTrain = new Audio('hit-by-train.mp3');
+        var hitByTrain = new Audio('assets/images/hit-by-train.mp3');
         hitByTrain.play();
         return false;
         
         
     }
     if (destination == "") {
-        var hitByTrain = new Audio('hit-by-train.mp3');
+        var hitByTrain = new Audio('assets/images/hit-by-train.mp3');
         hitByTrain.play();
         return false;
     }
     if (firstTrain == "") {
-        var hitByTrain = new Audio('hit-by-train.mp3');
+        var hitByTrain = new Audio('assets/images/hit-by-train.mp3');
         hitByTrain.play();
         return false;
     }
     if (trainFrequency == "") {
-        var hitByTrain = new Audio('hit-by-train.mp3');
+        var hitByTrain = new Audio('assets/images/hit-by-train.mp3');
         hitByTrain.play();
         return false;
     }
